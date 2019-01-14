@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/files/<path:path>')
 def send_js(path):
-    return send_from_directory('files', path)
+    return send_from_directory('files', path, mimetype='image/jpeg')
 
 @app.route('/')
 def homepage():
